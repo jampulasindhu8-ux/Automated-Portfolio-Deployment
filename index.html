@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sindhuja | B.Tech CSE Portfolio &amp; DevOps Showcase</title>
+  <meta name="description" content="Personal Portfolio of Sindhuja, B.Tech CSE Student at AVN Institute of Engineering and Technology, Hyderabad. Featuring projects, skills, resume, and automated CI/CD deployment with GitHub Actions.">
+  <meta name="keywords" content="Sindhuja, Portfolio, Computer Science, B.Tech CSE, AVN Institute of Engineering and Technology, Hyderabad, DevOps, GitHub Actions, Python, Java, JavaScript, CI/CD">
+  <meta name="author" content="Sindhuja">
+
+  <!-- Open Graph / Meta for Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sindhuja | B.Tech CSE Student Portfolio">
+  <meta property="og:description" content="Explore my projects including AI CareerMate, core CS skills, and automated CI/CD DevOps workflows.">
+  <meta property="og:image" content="assets/avatar.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Gradient Background Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- ======================================================== -->
+  <!-- Navigation Bar                                           -->
+  <!-- ======================================================== -->
+  <header class="header" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo" aria-label="Sindhuja Portfolio Home">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Sindhuja</span>
+        <span class="logo-slash">/</span>
+        <span class="logo-bracket">&gt;</span>
+        <span class="status-dot" title="Open to opportunities"></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#devops" class="nav-link">CI/CD Pipeline</a></li>
+          <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-cta-mobile">
+          <a href="#contact" class="btn btn-primary btn-sm">Hire Me <i class="fa-solid fa-paper-plane"></i></a>
+        </div>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm desktop-only">Let's Connect</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================== -->
+    <!-- 1. HERO SECTION                                          -->
+    <!-- ======================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="pulse-indicator"></span>
+            <span>B.Tech CSE Undergraduate &bull; Class of 2028</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Sindhuja</span>
+          </h1>
+
+          <div class="hero-typing-wrapper">
+            <span class="typing-prefix">I build &amp; explore: </span>
+            <span class="typing-text" id="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Passionate Computer Science student at <strong>AVN Institute of Engineering and Technology, Hyderabad</strong>.
+            Excited about software development, artificial intelligence, and building automated continuous deployment (CI/CD) pipelines.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> Explore Projects
+            </a>
+            <a href="assets/Sindhuja_Resume.pdf" download="Sindhuja_Resume.pdf" class="btn btn-secondary" id="hero-resume-btn">
+              <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-solid fa-envelope"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- Quick Social Links -->
+          <div class="hero-socials">
+            <span class="socials-label">Connect:</span>
+            <a href="https://github.com/sindhuja-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-icon">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sindhuja-cse" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:sindhuja.cse2028@gmail.com" aria-label="Send Email" class="social-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <div class="avatar-ring ring-1"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="avatar-image-container">
+              <img src="assets/avatar.svg" alt="Sindhuja - Computer Science Engineer" class="avatar-img" width="380" height="380">
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-python" title="Python Development">
+              <i class="fa-brands fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="floating-badge badge-java" title="Core Java &amp; OOP">
+              <i class="fa-brands fa-java"></i>
+              <span>Java</span>
+            </div>
+            <div class="floating-badge badge-github" title="DevOps CI/CD">
+              <i class="fa-brands fa-github-alt"></i>
+              <span>Actions</span>
+            </div>
+            <div class="floating-badge badge-web" title="Frontend Engineering">
+              <i class="fa-solid fa-code"></i>
+              <span>Web</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Highlights Bar -->
+      <div class="container">
+        <div class="highlights-strip">
+          <div class="highlight-item">
+            <div class="highlight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="highlight-details">
+              <h4>Graduation 2028</h4>
+              <p>AVN IET, Hyderabad</p>
+            </div>
+          </div>
+          <div class="highlight-divider"></div>
+          <div class="highlight-item">
+            <div class="highlight-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <div class="highlight-details">
+              <h4>DevOps Ready</h4>
+              <p>GitHub Actions CI/CD</p>
+            </div>
+          </div>
+          <div class="highlight-divider"></div>
+          <div class="highlight-item">
+            <div class="highlight-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="highlight-details">
+              <h4>AI CareerMate</h4>
+              <p>Featured Project</p>
+            </div>
+          </div>
+          <div class="highlight-divider"></div>
+          <div class="highlight-item">
+            <div class="highlight-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="highlight-details">
+              <h4>Core CS Skills</h4>
+              <p>DSA, OOP &amp; Full Stack</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 2. ABOUT ME SECTION                                      -->
+    <!-- ======================================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-regular fa-user"></i> Introduction</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">A glimpse into my background, academic passion, and software engineering philosophy.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card card-glass about-bio">
+            <div class="card-icon-header">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3>Who I Am</h3>
+            <p>
+              I am a dedicated <strong>Computer Science Engineering</strong> undergraduate at <strong>AVN Institute of Engineering and Technology, Hyderabad</strong> (expected graduation in <strong>2028</strong>).
+            </p>
+            <p>
+              Driven by curiosity and a problem-solving mindset, I immerse myself in mastering data structures, writing clean code in <strong>Python</strong> and <strong>Java</strong>, and designing responsive, user-friendly web applications.
+            </p>
+            <p>
+              Beyond traditional software development, I am deeply enthusiastic about <strong>DevOps automation</strong>—believing that high quality software delivery requires reproducible pipelines, automated testing, and seamless continuous deployment.
+            </p>
+            
+            <div class="about-personal-details">
+              <div class="detail-row">
+                <span class="detail-label"><i class="fa-solid fa-location-dot"></i> Location:</span>
+                <span class="detail-value">Hyderabad, Telangana, India</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label"><i class="fa-solid fa-language"></i> Languages:</span>
+                <span class="detail-value">English, Telugu, Hindi</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label"><i class="fa-solid fa-circle-check"></i> Status:</span>
+                <span class="detail-value highlight-status">Seeking Tech Internships</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-pillars">
+            <div class="pillar-card card-glass">
+              <div class="pillar-icon purple"><i class="fa-solid fa-bullseye"></i></div>
+              <div class="pillar-content">
+                <h4>Career Aspirations</h4>
+                <p>Aiming to launch a career as a Software Development Engineer (SDE) and Cloud/DevOps practitioner, contributing to high-impact products.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card card-glass">
+              <div class="pillar-icon blue"><i class="fa-solid fa-puzzle-piece"></i></div>
+              <div class="pillar-content">
+                <h4>Algorithmic Problem Solving</h4>
+                <p>Consistently honing core skills in Data Structures and Algorithms, Object-Oriented principles, and efficient computational logic.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card card-glass">
+              <div class="pillar-icon cyan"><i class="fa-solid fa-infinity"></i></div>
+              <div class="pillar-content">
+                <h4>DevOps &amp; Automation Mindset</h4>
+                <p>Advocating for automated testing, Git version control, and GitHub Actions CI/CD to eliminate manual deployment overhead.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card card-glass">
+              <div class="pillar-icon green"><i class="fa-solid fa-people-group"></i></div>
+              <div class="pillar-content">
+                <h4>Collaboration &amp; Growth</h4>
+                <p>Engaging in peer code reviews, hackathons, and community tech initiatives while continuously assimilating modern industry practices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 3. EDUCATION SECTION                                     -->
+    <!-- ======================================================== -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-book-open"></i> Academic Foundation</span>
+          <h2 class="section-title">Education <span class="gradient-text">Journey</span></h2>
+          <p class="section-subtitle">Academic qualifications, ongoing coursework, and foundational computer science studies.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1: B.Tech CSE -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card card-glass">
+              <div class="timeline-header">
+                <span class="timeline-badge current">2024 &ndash; 2028 (Present)</span>
+                <span class="timeline-degree">Bachelor of Technology (B.Tech)</span>
+              </div>
+              <h3 class="timeline-title">Computer Science and Engineering</h3>
+              <h4 class="timeline-institution">
+                <i class="fa-solid fa-building-columns"></i> AVN Institute of Engineering and Technology
+              </h4>
+              <p class="timeline-location">
+                <i class="fa-solid fa-map-pin"></i> Hyderabad, Telangana, India
+              </p>
+              <p class="timeline-desc">
+                Enrolled in the premier Computer Science Engineering undergraduate program. Actively developing depth across programming paradigms, algorithms, computer architecture, and hands-on system building.
+              </p>
+              
+              <div class="coursework-tags">
+                <span class="course-tag">Data Structures &amp; Algorithms</span>
+                <span class="course-tag">Object-Oriented Programming (Java/Python)</span>
+                <span class="course-tag">Database Management Systems</span>
+                <span class="course-tag">Web Technologies &amp; Standards</span>
+                <span class="course-tag">Computer Organization</span>
+                <span class="course-tag">DevOps &amp; Cloud Concepts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Intermediate Education -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card card-glass">
+              <div class="timeline-header">
+                <span class="timeline-badge">Completed 2024</span>
+                <span class="timeline-degree">Senior Secondary (Class XI - XII)</span>
+              </div>
+              <h3 class="timeline-title">Mathematics, Physics &amp; Chemistry (MPC)</h3>
+              <h4 class="timeline-institution">
+                <i class="fa-solid fa-school"></i> Junior College &bull; State Board of Intermediate Education
+              </h4>
+              <p class="timeline-location">
+                <i class="fa-solid fa-map-pin"></i> Hyderabad, Telangana
+              </p>
+              <p class="timeline-desc">
+                Built an exceptional foundation in mathematical analysis, analytical problem solving, logical deduction, and scientific principles which catalyze my computer science engineering coursework.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 4. SKILLS SECTION                                        -->
+    <!-- ======================================================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-gears"></i> Technical Stack</span>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Competencies</span></h2>
+          <p class="section-subtitle">Technologies, programming languages, and DevOps tools in my software engineering toolkit.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="skills-filter-buttons">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="languages">Languages</button>
+          <button class="filter-btn" data-filter="devops">DevOps &amp; Cloud</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="core">Core CS</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Skill: Python -->
+          <div class="skill-card card-glass" data-category="languages">
+            <div class="skill-icon-wrapper python">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">Python</h4>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">OOP, scripting, algorithms, data analysis, and AI/NLP integration.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: Java -->
+          <div class="skill-card card-glass" data-category="languages core">
+            <div class="skill-icon-wrapper java">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">Java</h4>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">Core Java, Object-Oriented principles, Collections framework, and DSA.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 84%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: HTML5 -->
+          <div class="skill-card card-glass" data-category="web">
+            <div class="skill-icon-wrapper html5">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">HTML5</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Semantic structure, Web Accessibility (a11y), SEO standards, and forms.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: CSS3 -->
+          <div class="skill-card card-glass" data-category="web">
+            <div class="skill-icon-wrapper css3">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">CSS3</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Flexbox, CSS Grid, custom keyframe animations, glassmorphism, responsive UI.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: JavaScript -->
+          <div class="skill-card card-glass" data-category="languages web">
+            <div class="skill-icon-wrapper js">
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">JavaScript (ES6+)</h4>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">Async/await, DOM manipulation, Fetch API, modular JS, and event handling.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: Git -->
+          <div class="skill-card card-glass" data-category="devops">
+            <div class="skill-icon-wrapper git">
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">Git</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Distributed version control, branching, rebasing, merge conflicts, Git CLI.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 90%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: GitHub -->
+          <div class="skill-card card-glass" data-category="devops">
+            <div class="skill-icon-wrapper github">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">GitHub</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Pull requests, issue tracking, code reviews, releases, and project boards.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: GitHub Actions -->
+          <div class="skill-card card-glass" data-category="devops">
+            <div class="skill-icon-wrapper actions">
+              <i class="fa-solid fa-bolt-lightning"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">GitHub Actions (CI/CD)</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">YAML pipeline workflows, automated code validation, secrets, and deployment.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: GitHub Pages -->
+          <div class="skill-card card-glass" data-category="devops">
+            <div class="skill-icon-wrapper pages">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">GitHub Pages</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Static hosting, official deployment actions, HTTPS, custom domains.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 94%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: Data Structures & Algorithms -->
+          <div class="skill-card card-glass" data-category="core">
+            <div class="skill-icon-wrapper dsa">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-meta">
+                <h4 class="skill-name">Data Structures &amp; Algorithms</h4>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <p class="skill-desc">Arrays, linked lists, stacks, queues, trees, searching &amp; sorting complexity.</p>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" style="width: 82%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 5. PROJECTS SECTION                                      -->
+    <!-- ======================================================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-diagram-project"></i> Portfolio Showcase</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world applications spanning AI-assisted guidance, automated DevOps, and computational tools.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Flagship Project 1: AI CareerMate -->
+          <article class="project-card card-glass featured-project">
+            <div class="project-badge-tag"><i class="fa-solid fa-star"></i> Featured Flagship Project</div>
+            <div class="project-media">
+              <img src="assets/projects/ai-careermate.svg" alt="AI CareerMate Architecture" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-preview-btn" data-project="careermate">
+                  <i class="fa-solid fa-eye"></i> View Deep Dive
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">NLP</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Git &amp; GitHub</span>
+              </div>
+              <h3 class="project-title">AI CareerMate</h3>
+              <p class="project-desc">
+                An intelligent career guidance and resume optimization system. Designed for engineering students to upload or paste resume text, evaluate industry alignment, extract key skills, and receive algorithmic step-by-step career path recommendations.
+              </p>
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-check"></i> Automated skill gap detection comparing student profiles against tech job criteria.</li>
+                <li><i class="fa-solid fa-check"></i> Personalized engineering milestone roadmap generation.</li>
+                <li><i class="fa-solid fa-check"></i> Interactive dashboard with percentage alignment scoring and ATS keyword tips.</li>
+              </ul>
+              <div class="project-footer">
+                <a href="https://github.com/sindhuja-dev/ai-careermate" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <i class="fa-brands fa-github"></i> Repository
+                </a>
+                <button class="btn btn-outline btn-sm project-preview-btn" data-project="careermate">
+                  <i class="fa-solid fa-circle-info"></i> Project Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: DevOps CI/CD Portfolio Deployment -->
+          <article class="project-card card-glass">
+            <div class="project-badge-tag devops-badge"><i class="fa-solid fa-server"></i> DevOps CI/CD Implementation</div>
+            <div class="project-media">
+              <img src="assets/projects/devops-pipeline.svg" alt="DevOps CI/CD Pipeline Flow" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <a href="#devops" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-terminal"></i> View Pipeline
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">GitHub Pages</span>
+                <span class="tag">CI/CD YAML</span>
+                <span class="tag">DevOps</span>
+              </div>
+              <h3 class="project-title">Automated Portfolio CI/CD Pipeline</h3>
+              <p class="project-desc">
+                Production-grade Continuous Integration and Continuous Deployment pipeline hosting this portfolio. Validates files, parses JavaScript syntax, checks HTML5 integrity, and securely deploys to GitHub Pages upon every git push to the main branch.
+              </p>
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-check"></i> Fully automated push-to-deploy workflow with zero downtime.</li>
+                <li><i class="fa-solid fa-check"></i> Pre-deployment code linting and file integrity validation job.</li>
+                <li><i class="fa-solid fa-check"></i> Configured with least-privilege GitHub Actions deployment tokens.</li>
+              </ul>
+              <div class="project-footer">
+                <a href="https://github.com/sindhuja-dev/automated-portfolio-deployment" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <i class="fa-brands fa-github"></i> Workflow Code
+                </a>
+                <a href="#devops" class="btn btn-outline btn-sm">
+                  <i class="fa-solid fa-chart-line"></i> Pipeline Architecture
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: AlgoVisualizer -->
+          <article class="project-card card-glass">
+            <div class="project-badge-tag"><i class="fa-solid fa-chart-column"></i> Data Structures &amp; Algorithms</div>
+            <div class="project-media">
+              <img src="assets/projects/algo-visualizer.svg" alt="AlgoVisualizer Graphic" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-preview-btn" data-project="algoviz">
+                  <i class="fa-solid fa-play"></i> Interactive Demo
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">HTML5 Canvas</span>
+                <span class="tag">CSS3</span>
+              </div>
+              <h3 class="project-title">AlgoVisualizer &ndash; Interactive Explorer</h3>
+              <p class="project-desc">
+                Educational tool for visualizing how classic sorting algorithms (Quick Sort, Merge Sort, Bubble Sort) and searching methods manipulate memory and arrays in real time with dynamic speed and size controls.
+              </p>
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-check"></i> Visual color-coded states for pivot, swap, comparison, and sorted elements.</li>
+                <li><i class="fa-solid fa-check"></i> Step counter tracking comparison complexity and runtime efficiency.</li>
+              </ul>
+              <div class="project-footer">
+                <a href="https://github.com/sindhuja-dev/algo-visualizer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <i class="fa-brands fa-github"></i> Source Code
+                </a>
+                <button class="btn btn-outline btn-sm project-preview-btn" data-project="algoviz">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Student Performance Tracker -->
+          <article class="project-card card-glass">
+            <div class="project-badge-tag"><i class="fa-solid fa-chart-pie"></i> Analytics &amp; Tooling</div>
+            <div class="project-media">
+              <img src="assets/projects/student-tracker.svg" alt="Student Performance Tracker Graphic" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-preview-btn" data-project="tracker">
+                  <i class="fa-solid fa-chart-line"></i> View Summary
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">OOP</span>
+                <span class="tag">File I/O</span>
+              </div>
+              <h3 class="project-title">Academic Performance &amp; Attendance Tracker</h3>
+              <p class="project-desc">
+                A Python-based academic dashboard calculating cumulative semester GPAs, tracking lecture attendance thresholds, and issuing timely warnings when attendance slips below engineering regulation limits.
+              </p>
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-check"></i> Automated calculation of weighted SGPA across theory and lab credits.</li>
+                <li><i class="fa-solid fa-check"></i> Generates printable academic progress summaries.</li>
+              </ul>
+              <div class="project-footer">
+                <a href="https://github.com/sindhuja-dev/student-performance-tracker" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <i class="fa-brands fa-github"></i> Repository
+                </a>
+                <button class="btn btn-outline btn-sm project-preview-btn" data-project="tracker">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- DEVOPS ARCHITECTURE DEEP DIVE SECTION                    -->
+    <!-- ======================================================== -->
+    <section class="section devops-section" id="devops">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-infinity"></i> DevOps Engineering</span>
+          <h2 class="section-title">Automated <span class="gradient-text">CI/CD Workflow</span></h2>
+          <p class="section-subtitle">How this portfolio implements automated continuous integration and continuous deployment via GitHub Actions.</p>
+        </div>
+
+        <div class="devops-interactive-card card-glass">
+          <div class="devops-top-bar">
+            <div class="window-buttons">
+              <span class="win-btn red"></span>
+              <span class="win-btn yellow"></span>
+              <span class="win-btn green"></span>
+            </div>
+            <div class="window-title">.github/workflows/deploy.yml &bull; CI/CD Pipeline Architecture</div>
+            <div class="pipeline-status-badge">
+              <span class="status-live-icon"></span> Status: Automated &amp; Ready
+            </div>
+          </div>
+
+          <!-- Step-by-step pipeline visualization -->
+          <div class="pipeline-steps-container">
+            <!-- Step 1 -->
+            <div class="pipeline-step">
+              <div class="step-number">01</div>
+              <div class="step-icon"><i class="fa-solid fa-code-commit"></i></div>
+              <div class="step-content">
+                <h4>Code Push</h4>
+                <p>Developer pushes commits to the <code>main</code> branch or triggers workflow manually.</p>
+                <div class="step-badge">Trigger: push (main)</div>
+              </div>
+            </div>
+
+            <div class="step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+
+            <!-- Step 2 -->
+            <div class="pipeline-step">
+              <div class="step-number">02</div>
+              <div class="step-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="step-content">
+                <h4>Validation (CI)</h4>
+                <p>Verifies file integrity, runs <code>node --check script.js</code>, checks HTML &amp; CSS tags.</p>
+                <div class="step-badge pass">Job: validate</div>
+              </div>
+            </div>
+
+            <div class="step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+
+            <!-- Step 3 -->
+            <div class="pipeline-step">
+              <div class="step-number">03</div>
+              <div class="step-icon"><i class="fa-solid fa-box-archive"></i></div>
+              <div class="step-content">
+                <h4>Artifact Packaging</h4>
+                <p>Configures Pages environment and securely packages static distribution bundle.</p>
+                <div class="step-badge">upload-pages-artifact@v3</div>
+              </div>
+            </div>
+
+            <div class="step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+
+            <!-- Step 4 -->
+            <div class="pipeline-step">
+              <div class="step-number">04</div>
+              <div class="step-icon"><i class="fa-solid fa-globe"></i></div>
+              <div class="step-content">
+                <h4>Live Deployment (CD)</h4>
+                <p>Deploys atomically to GitHub Pages with official HTTPS and zero-downtime serving.</p>
+                <div class="step-badge live">deploy-pages@v4</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Snippet & DevOps Features -->
+          <div class="devops-details-grid">
+            <div class="code-preview-pane">
+              <div class="code-pane-header">
+                <span><i class="fa-solid fa-file-code"></i> GitHub Actions Workflow (Excerpt)</span>
+                <button class="copy-code-btn" id="copy-workflow-btn" title="Copy Workflow YAML">
+                  <i class="fa-regular fa-copy"></i> Copy YAML
+                </button>
+              </div>
+              <pre class="code-display"><code><span class="k">name</span>: <span class="s">CI/CD Portfolio Automated Deployment</span>
+
+<span class="k">on</span>:
+  <span class="k">push</span>:
+    <span class="k">branches</span>: [ <span class="s">main</span> ]
+  <span class="k">workflow_dispatch</span>:
+
+<span class="k">permissions</span>:
+  <span class="k">contents</span>: <span class="s">read</span>
+  <span class="k">pages</span>: <span class="s">write</span>
+  <span class="k">id-token</span>: <span class="s">write</span>
+
+<span class="k">jobs</span>:
+  <span class="k">validate</span>:
+    <span class="k">runs-on</span>: <span class="s">ubuntu-latest</span>
+    <span class="k">steps</span>:
+      - <span class="k">uses</span>: <span class="s">actions/checkout@v4</span>
+      - <span class="k">name</span>: <span class="s">Validate Syntax &amp; Structure</span>
+        <span class="k">run</span>: <span class="s">node --check script.js</span>
+
+  <span class="k">deploy</span>:
+    <span class="k">needs</span>: <span class="s">validate</span>
+    <span class="k">runs-on</span>: <span class="s">ubuntu-latest</span>
+    <span class="k">environment</span>:
+      <span class="k">name</span>: <span class="s">github-pages</span>
+      <span class="k">url</span>: <span class="s">${{ steps.deployment.outputs.page_url }}</span>
+    <span class="k">steps</span>:
+      - <span class="k">uses</span>: <span class="s">actions/deploy-pages@v4</span>
+        <span class="k">id</span>: <span class="s">deployment</span></code></pre>
+            </div>
+
+            <div class="devops-checklist">
+              <h4>DevOps Best Practices Implemented:</h4>
+              <ul class="checklist-items">
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <div>
+                    <strong>Continuous Integration:</strong> Automated pre-flight validation preventing broken JavaScript or missing assets from ever reaching production.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <div>
+                    <strong>Principle of Least Privilege:</strong> Scoped GitHub Token permissions (<code>pages: write</code>, <code>id-token: write</code>, <code>contents: read</code>) without storing hardcoded static credentials.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <div>
+                    <strong>Safe Concurrency Handling:</strong> Configured <code>concurrency.cancel-in-progress: false</code> to guarantee deployment transactions finish cleanly.
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <div>
+                    <strong>Auditability &amp; Reporting:</strong> Real-time deployment summary pushed to GitHub Actions Step Summary for instant stakeholder feedback.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 6. RESUME SECTION                                        -->
+    <!-- ======================================================== -->
+    <section class="section resume-section" id="resume">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-regular fa-file-lines"></i> Curriculum Vitae</span>
+          <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
+          <p class="section-subtitle">Download my official resume or view the interactive profile breakdown below.</p>
+        </div>
+
+        <div class="resume-card-wrapper">
+          <div class="resume-card card-glass">
+            <div class="resume-header-preview">
+              <div class="resume-profile-snippet">
+                <div class="resume-avatar-mini">
+                  <img src="assets/avatar.svg" alt="Sindhuja" width="60" height="60">
+                </div>
+                <div>
+                  <h3 class="resume-name">Sindhuja</h3>
+                  <p class="resume-sub">B.Tech Computer Science and Engineering &bull; 2024&ndash;2028</p>
+                  <p class="resume-college">AVN Institute of Engineering and Technology, Hyderabad</p>
+                </div>
+              </div>
+              <div class="resume-actions-group">
+                <!-- Functional Download button linking to generated PDF -->
+                <a href="assets/Sindhuja_Resume.pdf" download="Sindhuja_Resume.pdf" class="btn btn-primary" id="main-resume-download">
+                  <i class="fa-solid fa-download"></i> Download Resume (PDF)
+                </a>
+                <button class="btn btn-outline" id="open-cv-modal-btn">
+                  <i class="fa-solid fa-expand"></i> View Interactive CV
+                </button>
+              </div>
+            </div>
+
+            <div class="resume-preview-columns">
+              <!-- Column 1 -->
+              <div class="resume-col">
+                <h4 class="resume-col-title"><i class="fa-solid fa-laptop-code"></i> Core Competencies</h4>
+                <ul class="resume-list">
+                  <li><strong>Languages:</strong> Python, Java, JavaScript (ES6+), HTML5, CSS3</li>
+                  <li><strong>DevOps Tools:</strong> Git, GitHub, GitHub Actions, GitHub Pages</li>
+                  <li><strong>Concepts:</strong> Data Structures &amp; Algorithms, OOP, CI/CD, Responsive Web UI</li>
+                </ul>
+
+                <h4 class="resume-col-title" style="margin-top: 1.5rem;"><i class="fa-solid fa-award"></i> Certifications &amp; Labs</h4>
+                <ul class="resume-list">
+                  <li>Git &amp; GitHub Version Control Fundamentals</li>
+                  <li>Python Programming &amp; Problem Solving</li>
+                  <li>Continuous Integration &amp; Deployment Foundations</li>
+                </ul>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="resume-col">
+                <h4 class="resume-col-title"><i class="fa-solid fa-rocket"></i> Key Projects Overview</h4>
+                <div class="resume-project-item">
+                  <h5>AI CareerMate</h5>
+                  <p>Intelligent resume parser and career recommendation system built with Python, NLP, and Web UI.</p>
+                </div>
+                <div class="resume-project-item">
+                  <h5>Automated Portfolio CI/CD Pipeline</h5>
+                  <p>Production deployment pipeline leveraging GitHub Actions, code syntax validation, and Pages hosting.</p>
+                </div>
+                <div class="resume-project-item">
+                  <h5>AlgoVisualizer</h5>
+                  <p>Interactive algorithm visualizer showing real-time sorting and asymptotic runtime complexity.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="resume-footer-note">
+              <span><i class="fa-solid fa-circle-info"></i> The official PDF version is formatted to industry standard, ATS-friendly specifications.</span>
+              <a href="assets/Sindhuja_Resume.pdf" target="_blank" rel="noopener noreferrer" class="link-styled">Open in new tab <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 7. CONTACT SECTION                                       -->
+    <!-- ======================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-comments"></i> Let's Talk</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Have an internship opportunity, a project idea, or just want to connect? Reach out anytime!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Details Cards -->
+          <div class="contact-info-wrapper">
+            <!-- Email Card -->
+            <a href="mailto:sindhuja.cse2028@gmail.com" class="contact-card card-glass">
+              <div class="contact-card-icon mail"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-card-content">
+                <h4>Email Me</h4>
+                <p>sindhuja.cse2028@gmail.com</p>
+                <span class="contact-hint">Click to launch mail client &rarr;</span>
+              </div>
+            </a>
+
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/in/sindhuja-cse" target="_blank" rel="noopener noreferrer" class="contact-card card-glass">
+              <div class="contact-card-icon linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="contact-card-content">
+                <h4>LinkedIn Profile</h4>
+                <p>linkedin.com/in/sindhuja-cse</p>
+                <span class="contact-hint">Connect professionally &rarr;</span>
+              </div>
+            </a>
+
+            <!-- GitHub Card -->
+            <a href="https://github.com/sindhuja-dev" target="_blank" rel="noopener noreferrer" class="contact-card card-glass">
+              <div class="contact-card-icon github"><i class="fa-brands fa-github"></i></div>
+              <div class="contact-card-content">
+                <h4>GitHub Profile</h4>
+                <p>github.com/sindhuja-dev</p>
+                <span class="contact-hint">Explore code repositories &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Location Card -->
+            <div class="contact-card card-glass">
+              <div class="contact-card-icon location"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-card-content">
+                <h4>Location &amp; Institution</h4>
+                <p>Hyderabad, Telangana, India</p>
+                <span class="contact-hint">AVN Institute of Engineering and Technology</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-wrapper card-glass">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-sub">Fill out the form below. I typically respond within 24 hours.</p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. John Doe" required autocomplete="name">
+                </div>
+                <span class="form-error" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-at input-icon"></i>
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. name@example.com" required autocomplete="email">
+                </div>
+                <span class="form-error" id="email-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-pen-nib input-icon"></i>
+                  <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Internship Inquiry / Collaboration" required>
+                </div>
+                <span class="form-error" id="subject-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message <span class="required">*</span></label>
+                <div class="input-with-icon textarea-icon">
+                  <i class="fa-solid fa-message input-icon"></i>
+                  <textarea id="contact-message" name="message" rows="5" class="form-input form-textarea" placeholder="Hello Sindhuja, I came across your portfolio..." required></textarea>
+                </div>
+                <span class="form-error" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span class="btn-text">Send Message <i class="fa-solid fa-paper-plane"></i></span>
+                <span class="btn-spinner" style="display: none;"><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span>
+              </button>
+            </form>
+
+            <!-- Toast / Alert Feedback -->
+            <div id="form-feedback" class="form-feedback" style="display: none;" role="alert"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Interactive Full CV Preview                       -->
+  <!-- ======================================================== -->
+  <div class="modal-backdrop" id="cv-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title"><i class="fa-solid fa-file-lines"></i> Sindhuja &ndash; Professional CV</h3>
+        <div class="modal-actions">
+          <button class="btn btn-sm btn-secondary" id="print-cv-btn" title="Print or save as PDF">
+            <i class="fa-solid fa-print"></i> Print
+          </button>
+          <a href="assets/Sindhuja_Resume.pdf" download="Sindhuja_Resume.pdf" class="btn btn-sm btn-primary">
+            <i class="fa-solid fa-download"></i> PDF
+          </a>
+          <button class="modal-close-btn" id="close-cv-modal-btn" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body printable-cv">
+        <!-- Rendered CV document -->
+        <div class="cv-doc-header">
+          <h2>SINDHUJA</h2>
+          <p class="cv-tagline">B.Tech Computer Science and Engineering Undergraduate &bull; Aspiring Software &amp; DevOps Engineer</p>
+          <div class="cv-contact-row">
+            <span><i class="fa-solid fa-envelope"></i> sindhuja.cse2028@gmail.com</span>
+            <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/sindhuja-cse</span>
+            <span><i class="fa-brands fa-github"></i> github.com/sindhuja-dev</span>
+            <span><i class="fa-solid fa-location-dot"></i> Hyderabad, India</span>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h4>CAREER OBJECTIVE</h4>
+          <p>
+            Motivated Computer Science Engineering student eager to leverage strong problem-solving capabilities in Python and Java, modern web development skills, and practical CI/CD automation expertise to contribute toward high-impact software engineering roles and internships.
+          </p>
+        </div>
+
+        <div class="cv-section">
+          <h4>EDUCATION</h4>
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <strong>AVN Institute of Engineering and Technology, Hyderabad</strong>
+              <span>2024 &ndash; 2028</span>
+            </div>
+            <div class="cv-entry-sub">Bachelor of Technology (B.Tech) &ndash; Computer Science and Engineering (CSE)</div>
+            <p>Relevant Coursework: Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Web Technologies, Cloud &amp; DevOps Fundamentals.</p>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h4>TECHNICAL SKILLS</h4>
+          <p><strong>Programming Languages:</strong> Python, Java, JavaScript (ES6+), HTML5, CSS3</p>
+          <p><strong>DevOps &amp; Cloud Tools:</strong> Git, GitHub, GitHub Actions (CI/CD Pipelines), GitHub Pages</p>
+          <p><strong>Core CS Competencies:</strong> Data Structures &amp; Algorithms, Object-Oriented Design, System Automation, REST Principles</p>
+        </div>
+
+        <div class="cv-section">
+          <h4>ACADEMIC PROJECTS</h4>
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <strong>AI CareerMate &ndash; Career Guidance &amp; Resume Scoring Platform</strong>
+              <span>Python, NLP, Web</span>
+            </div>
+            <ul>
+              <li>Engineered an intelligent assistant to parse student resumes, analyze skill alignments, and recommend tailored learning pathways.</li>
+              <li>Implemented automated keyword scoring to prepare undergraduates for technical recruitment interviews.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <strong>Automated Portfolio Deployment Pipeline</strong>
+              <span>GitHub Actions, Pages, CI/CD</span>
+            </div>
+            <ul>
+              <li>Designed and established a continuous integration and continuous deployment pipeline deploying static portfolio assets atomically.</li>
+              <li>Integrated pre-deployment syntax linting and integrity verification with automated GitHub Actions run reporting.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Project Deep Dive Details                         -->
+  <!-- ======================================================== -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="project-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="project-modal-title"><i class="fa-solid fa-folder-open"></i> Project Spotlight</h3>
+        <button class="modal-close-btn" id="close-project-modal-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="project-modal-content">
+        <!-- Content dynamically injected by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER                                                   -->
+  <!-- ======================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-name">Sindhuja</span>
+            <span class="logo-slash">/</span>
+            <span class="logo-bracket">&gt;</span>
+          </a>
+          <p class="footer-tagline">
+            Building software with passion, engineering automated pipelines with precision.
+          </p>
+          <div class="footer-student-badge">
+            <i class="fa-solid fa-graduation-cap"></i> B.Tech CSE &bull; AVN IET, Hyderabad (Graduation 2028)
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#devops">CI/CD Pipeline</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-devops">
+          <h4>DevOps Architecture</h4>
+          <p>Hosted on <strong>GitHub Pages</strong> with automated deployments triggered by <strong>GitHub Actions</strong>.</p>
+          <div class="devops-status-chip">
+            <i class="fa-solid fa-circle-check"></i> CI/CD Pipeline Active
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Sindhuja. All rights reserved. Designed &amp; engineered for modern web standards.</p>
+        <div class="footer-social-icons">
+          <a href="https://github.com/sindhuja-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sindhuja-cse" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:sindhuja.cse2028@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll To Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

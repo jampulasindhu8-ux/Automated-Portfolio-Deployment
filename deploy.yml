@@ -1,0 +1,153 @@
+name: CI/CD Portfolio Automated Deployment
+
+# Trigger deployment on every push to main branch and allow manual triggers
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want production deployments to complete safely.
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  # -------------------------------------------------------------
+  # Job 1: Automated Validation & Quality Assurance (CI)
+  # -------------------------------------------------------------
+  validate:
+    name: 'CI: Code Validation & Quality Checks'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime for Syntax Checks
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify Essential Project Files Integrity
+        run: |
+          echo "=========================================="
+          echo "  CHECKING ESSENTIAL PORTFOLIO FILES     "
+          echo "=========================================="
+          MISSING=0
+          REQUIRED_FILES=(
+            "index.html"
+            "style.css"
+            "script.js"
+            "README.md"
+            "assets/favicon.svg"
+            "assets/avatar.svg"
+            "assets/Sindhuja_Resume.pdf"
+            "assets/projects/ai-careermate.svg"
+            "assets/projects/devops-pipeline.svg"
+            "assets/projects/algo-visualizer.svg"
+            "assets/projects/student-tracker.svg"
+          )
+
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ -f "$file" ]; then
+              echo "  [PASS] Found: $file"
+            else
+              echo "  [FAIL] Missing required file: $file"
+              MISSING=1
+            fi
+          done
+
+          if [ $MISSING -ne 0 ]; then
+            echo "ERROR: One or more required project files are missing!"
+            exit 1
+          fi
+          echo "All essential project assets and files verified successfully."
+
+      - name: Validate JavaScript Syntax
+        run: |
+          echo "=========================================="
+          echo "  RUNNING JAVASCRIPT SYNTAX CHECK         "
+          echo "=========================================="
+          node --check script.js
+          echo "  [PASS] script.js syntax is clean and valid."
+
+      - name: Validate HTML5 Structure & Tags
+        run: |
+          echo "=========================================="
+          echo "  VALIDATING HTML5 STRUCTURE              "
+          echo "=========================================="
+          grep -iq "<!DOCTYPE html>" index.html || (echo "[FAIL] Missing DOCTYPE" && exit 1)
+          grep -iq "<html" index.html || (echo "[FAIL] Missing <html> tag" && exit 1)
+          grep -iq "<head>" index.html || (echo "[FAIL] Missing <head> tag" && exit 1)
+          grep -iq "<body>" index.html || (echo "[FAIL] Missing <body> tag" && exit 1)
+          grep -iq "viewport" index.html || (echo "[FAIL] Missing viewport meta tag" && exit 1)
+          echo "  [PASS] HTML5 doctype, head, body, and viewport tags verified."
+
+      - name: Validate CSS Balance & Selectors
+        run: |
+          echo "=========================================="
+          echo "  VALIDATING CSS SYNTAX                   "
+          echo "=========================================="
+          OPEN_BRACKETS=$(grep -o "{" style.css | wc -l)
+          CLOSE_BRACKETS=$(grep -o "}" style.css | wc -l)
+          echo "Open brackets: $OPEN_BRACKETS | Close brackets: $CLOSE_BRACKETS"
+          if [ "$OPEN_BRACKETS" -ne "$CLOSE_BRACKETS" ]; then
+            echo "[FAIL] Mismatched curly brackets in style.css!"
+            exit 1
+          fi
+          echo "  [PASS] style.css syntax structure is balanced."
+
+      - name: Generate CI Summary Report
+        run: |
+          echo "### 🚀 CI Pipeline Report: Passed! :white_check_mark:" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Status | Details |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :---: | :--- |" >> $GITHUB_STEP_SUMMARY
+          echo "| **File Structure** | :white_check_mark: | All HTML, CSS, JS and Asset files verified |" >> $GITHUB_STEP_SUMMARY
+          echo "| **JavaScript Syntax** | :white_check_mark: | Validated with Node.js parser |" >> $GITHUB_STEP_SUMMARY
+          echo "| **HTML5 Standards** | :white_check_mark: | Semantic structure and responsive meta tags valid |" >> $GITHUB_STEP_SUMMARY
+          echo "| **CSS Integrity** | :white_check_mark: | Balanced brackets and clean styling |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "*Ready for continuous deployment to GitHub Pages.*" >> $GITHUB_STEP_SUMMARY
+
+  # -------------------------------------------------------------
+  # Job 2: Continuous Deployment to GitHub Pages (CD)
+  # -------------------------------------------------------------
+  deploy:
+    name: 'CD: Deploy to GitHub Pages'
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire portfolio directory
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Deployment Status Summary
+        run: |
+          echo "### 🌐 CD Deployment Successful! :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "The latest code changes from branch \`main\` have been automatically deployed to GitHub Pages." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Live URL:** [${{ steps.deployment.outputs.page_url }}](${{ steps.deployment.outputs.page_url }})" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Portfolio is live and accessible worldwide! :sparkles:" >> $GITHUB_STEP_SUMMARY

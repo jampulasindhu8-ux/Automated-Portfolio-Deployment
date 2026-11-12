@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p4Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#p4Bg)" />
+  <rect x="1" y="1" width="598" height="358" rx="15" fill="none" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.5" />
+
+  <!-- Top summary cards -->
+  <g transform="translate(35, 30)">
+    <!-- Card 1: Attendance -->
+    <rect width="160" height="90" rx="10" fill="#1e293b" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <text x="20" y="28" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Attendance Rate</text>
+    <text x="20" y="60" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold" fill="#10b981">92.4%</text>
+    <rect x="20" y="70" width="120" height="6" rx="3" fill="#334155" />
+    <rect x="20" y="70" width="110" height="6" rx="3" fill="#10b981" />
+
+    <!-- Card 2: Cumulative GPA -->
+    <rect x="185" width="160" height="90" rx="10" fill="#1e293b" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <text x="205" y="28" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Semester SGPA</text>
+    <text x="205" y="60" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold" fill="#38bdf8">9.12</text>
+    <text x="205" y="78" font-family="'Segoe UI', sans-serif" font-size="10" fill="#a5f3fc">Top 5% in CSE cohort</text>
+
+    <!-- Card 3: Assignments -->
+    <rect x="370" width="160" height="90" rx="10" fill="#1e293b" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <text x="390" y="28" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Lab Submissions</text>
+    <text x="390" y="60" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold" fill="#c084fc">18 / 18</text>
+    <text x="390" y="78" font-family="'Segoe UI', sans-serif" font-size="10" fill="#e9d5ff">100% on-time completion</text>
+  </g>
+
+  <!-- Bottom Analytics Graph -->
+  <g transform="translate(35, 140)">
+    <rect width="530" height="180" rx="10" fill="#161e2e" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <text x="25" y="32" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Subject Performance Distribution (Python / Java / DSA / OS)</text>
+
+    <!-- Chart grid lines -->
+    <line x1="45" y1="60" x2="495" y2="60" stroke="#253248" stroke-width="1" />
+    <line x1="45" y1="95" x2="495" y2="95" stroke="#253248" stroke-width="1" />
+    <line x1="45" y1="130" x2="495" y2="130" stroke="#253248" stroke-width="1" />
+
+    <!-- Bar chart groups -->
+    <!-- Python -->
+    <rect x="75" y="65" width="40" height="75" rx="4" fill="url(#chartGrad)" />
+    <text x="95" y="155" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Python</text>
+    <text x="95" y="60" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#38bdf8" text-anchor="middle">95%</text>
+
+    <!-- Java -->
+    <rect x="185" y="75" width="40" height="65" rx="4" fill="#6366f1" />
+    <text x="205" y="155" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Java</text>
+    <text x="205" y="70" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#a5b4fc" text-anchor="middle">91%</text>
+
+    <!-- DSA -->
+    <rect x="295" y="70" width="40" height="70" rx="4" fill="#a855f7" />
+    <text x="315" y="155" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">DSA</text>
+    <text x="315" y="65" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#d8b4fe" text-anchor="middle">93%</text>
+
+    <!-- Web Dev -->
+    <rect x="405" y="60" width="40" height="80" rx="4" fill="#10b981" />
+    <text x="425" y="155" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Web &amp; Git</text>
+    <text x="425" y="55" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#6ee7b7" text-anchor="middle">98%</text>
+  </g>
+</svg>
